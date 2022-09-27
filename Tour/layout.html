@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tour</title>
+    <style>
+        
+    /* 태그 초기화 */
+    *{
+        margin: 0;
+        padding: 0;
+        font: normal 16px '맑은 고딕';
+    }
+
+    #wrapper {
+        width: 100%;
+        height: auto;
+    }
+    header {
+        width: 100%;
+        height: 100px;
+        border: 1px solid red;
+        box-sizing: border-box;
+    }
+    div {
+        display: block;
+    }
+    header > div {
+        position: relative;
+        width: 1000px;
+        height: 100px;
+        border: 1px solid green;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+    header > div > ul {
+        list-style: none;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 28px;
+        border: 1px solid blue;
+        box-sizing: border-box;
+    }
+
+    header > div > ul > li {
+        float: left;
+        width: 20%;
+        height: 100%;
+        border: 1px solid #808080;
+        box-sizing: border-box;
+    }
+
+    main {
+        width: 1000px;
+        height: auto;
+        border: 1px solid #ff0000;
+        margin: 0 auto;
+
+    }
+    main > section {
+        display: block;
+        width: 100%;
+        height: 620px;
+        border: 1px solid #0000ff;
+        box-sizing: border-box;
+    }
+    
+    main > section > div {
+        width: 200px;
+        height: 200px;
+        float: left;
+        border: 1px solid #808080;
+        box-sizing: border-box;
+    }
+    main > section > div:nth-child(7) {
+        clear: left;
+        margin-left: 200px;
+    }
+    main > article {
+        display: block;
+        width: 100%;
+        height: 150px;
+        border: 1px solid #0000ff;
+        box-sizing: border-box;
+    }
+    main > article > div {
+        float: left;
+        width: 25%;
+        height: 100%;
+        border: 1px solid #008000;
+        box-sizing: border-box;
+    }
+
+    footer {
+        width: 1000px;
+        height: 100px;
+        border: 1px solid #ff0000;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div>
+                <ul>
+                    <li> </li>
+                    <li> </li>
+                    <li> </li>
+                    <li> </li>
+                    <li> </li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <section>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+            </section>
+            <article>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </article>
+        </main>
+        <footer>
+            <div></div>
+        </footer>
+    </div>
+</body>
+</html>
