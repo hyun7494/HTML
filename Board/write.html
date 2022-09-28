@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>글쓰기</title>    
+    <link rel="stylesheet" href="./css/style.css"/>
+    
+    <style>
+        #board.write {
+            position: relative;
+            width: 720px;
+            height: auto;
+            border: 1px solid #000000;
+        }
+        
+        #board.write > form >table {
+            width: 100%;
+            height: auto;
+            border-collapse: collapse;
+            border-spacing: 0;
+            border-top: 2px solid #111;
+        }
+        #board.write > form > table > tr {
+            width: 100px;
+        }
+        #board.write > form > table > td {
+            padding: 12px 6px;
+        }
+        #board.write > table > td > td {}
+        #board.write > table > td > td {}
+        #board.write > table.textarea{
+            resize: none;
+        }
+
+        #board.write > form > div {
+            width: auto;
+            height: 30px;
+            margin-top: 10px;
+            text-align: right;
+        }
+        #board.write > table.textarea {
+            resize: none;
+        }
+        #board.write > table.input {
+            width: 100%;
+            height: 24px;
+            border: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <h3>Board System v1.0</h3>
+            <p>
+                <span class="nick">길동이</span>님 반갑습니다.
+                <a href="#" class="logout">[로그아웃]</a>
+            </p>
+        </header>
+
+            <main id="board" class="write">
+            
+                <form action="#">
+                    <table border="1">
+                        <h3>글쓰기</h3>
+                        <tr>
+                            <td>제목</td>
+                            <td><textarea>제목을 입력하세요</textarea></td>
+                        </tr>
+                        <tr>
+                            <td>내용</td>
+                            <td>
+                                <textarea></textarea>
+                            </td>
+                        </tr>
+                    
+                        
+                        <td>첨부
+                            <td>
+                                <div>
+                                    <input type="file" value="파일 선택">
+                                </div>
+                            </td>
+                        </td>
+                        
+                    </table>
+                    <div>
+                        <a href="#" class= "btnCancel">취소</a>
+                        <input type="submit" class="btnWrite" value="작성완료">
+
+                    </div>
+                </form>
+        </main>
+
+        <footer>
+            <p>ⓒCopyleft by chhak.or.kr</p>
+        </footer>    
+    </div>
+</body>
+</html>

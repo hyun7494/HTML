@@ -1,6 +1,5 @@
-
 /* 태그 초기화 */
-*{
+* {
     margin: 0;
     padding: 0;
     font: normal 12px '돋움';
@@ -8,15 +7,15 @@
 
 ul, ol {list-style: none;}
 a {text-decoration: none; color: #111;}
-input, textarea{outline: none}
+input, textarea {outline: none;}
 
-#wrapper{
+#wrapper {
     width: 800px;
     height: auto;
-    border: 0px solid red;
     margin: 0 auto;
 }
-/* 헤더 */
+
+/* 헤더공통 */
 header {
     width: 100%;
     height: 35px;
@@ -24,29 +23,39 @@ header {
     border-bottom: 1px solid #ebebeb;
     box-sizing: border-box;
 }
-header > h3{
+header > h3 {
     float: left;
-    color: #333;
+    color: #777;
     font-weight: bold;
     margin-top: 10px;
-    margin-left: 1opx;
+    margin-left: 10px;
 }
 
-/* 메인 공통 */
+header > p {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+header > p > .nick {
+    font-weight: bold;
+}
+header > p > .logout:hover {
+    text-decoration: underline;
+}
+
+/* 메인공통 */
 main {
     width: 100%;
     height: auto;
-    border: 0px solid blue;
-    box-sizing: border-box;
 }
 
-/* 푸터 공통 */
+/* 푸터공통 */
 footer {
     width: 100%;
     height: 35px;
     background: #f7f7f7;
     border-top: 1px solid #ebebeb;
-    box-sizing: border-box;
+    box-sizing: border-box;            
 }
 
 footer > p {
@@ -60,15 +69,15 @@ footer > p {
 #user.login {
     width: 360px;
     height: auto;
-    border: 1px scroll #cfded8;
-    margin: 100px auto
+    border: 1px solid #cfded8;
+    margin: 100px auto;
 }
-#user.login >form{
+#user.login > form {
     position: relative;
     width: 100%;
-    height: auto;
+    height: auto;            
 }
-#user.login >form > table {
+#user.login > form > table {
     margin-left: 50px;
     margin-top: 26px;
 }
@@ -81,9 +90,9 @@ footer > p {
     border: 1px solid #e4eaec;
     background: #f7f7f7;
     margin-top: 4px;
-    margin-left: 6px;
+    margin-left: 6px;            
 }
-#user.login >form > .btnLogin{
+#user.login > form > .btnLogin {
     position: absolute;
     right: 46px;
     top: 6px;
@@ -92,7 +101,7 @@ footer > p {
     border: 1px solid #bebebe;
     background: #fdfdfd;
 }
-#user.login > .info{
+#user.login > .info {
     width: 100%;
     height: 104px;
     background: #f5f6fa;
@@ -101,15 +110,15 @@ footer > p {
     padding: 16px;
     box-sizing: border-box;
 }
-#user.login > .info > h3{}
-#user.login > .info > p{
+#user.login > .info > h3 {}
+#user.login > .info > p {
     margin: 10px 0;
 }
-#user.login > .info > a{
+#user.login > .info > a {
     float: right;
 }
-/* 약관 */
 
+/* 약관 */
 #user.terms {
     width: 600px;
     height: auto;            
@@ -166,7 +175,143 @@ footer > p {
 }
 
 /* 회원가입 */
+#user.register {
+    width: 600px;
+    height: auto;            
+    margin: 60px auto;
+    overflow: hidden;
+}
+#user.register > form {}
+#user.register table {
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #e9e9e9;
+    border-top: 2px solid #111;
+    margin-bottom: 16px;
+}
+#user.register table caption {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+#user.register table tr {}
+#user.register table tr > th {
+    width: 106px;
+    height: 38px;
+    background: #f5f8f9;
+}
+#user.register table tr > td {
+    padding: 6px;
+    box-sizing: border-box;
+}
+#user.register table input {
+    width: 160px;
+    height: 22px;
+    border: 1px solid #e4eaec;
+    background: #f7f7f7;
+    text-indent: 6px;
+}
+#user.register table input[name=addr1] {
+    display: block;
+    margin: 5px 0;
+    width: 360px;
+}
+#user.register table input[name=addr2] {
+    width: 360px;
+}
+#user.register table button {
+    border: none;
+    background: none;
+    vertical-align: middle;
+}
+
+#user.register > form > div {
+    float: right;
+}
+#user.register > form > div > .btnCancel {
+    display: inline-block;
+    padding: 8px;
+    border: 1px solid #bebebe;
+    background: #fdfdfd;
+}
+#user.register > form > div > .btnRegister {
+    display: inline-block;
+    padding: 8px;
+    border: 1px solid #bebebe;
+    background: #e9e9e9;
+}
+
 /* 글목록 */
+#board.list {
+    position: relative;
+    width: 720px;
+    height: auto;            
+    margin: 60px auto;
+}
+#board.list > table {
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-top: 2px solid #111;
+}
+
+#board.list > table caption {
+    text-align: left;
+    margin-bottom: 6px;
+}
+#board.list > table tr {}
+#board.list > table th {
+    width: auto;
+    height: 40px;
+    background: #e5ecef;
+    border-bottom: 1px solid #d1dee2;
+}
+#board.list > table th:nth-child(1) {}
+#board.list > table th:nth-child(2) {}
+#board.list > table th:nth-child(3) {}
+#board.list > table th:nth-child(4) {}
+#board.list > table th:nth-child(5) {}
+#board.list > table td {
+    width: auto;
+    height: 38px;
+    border-bottom: 1px solid #e9e9e9;
+    text-align: center;
+}
+
+#board.list > table td:nth-child(2) {text-align: left;}
+
+#board.list > .page {
+    text-align: center;
+    margin-top: 10px;
+}
+#board.list > .page > a {
+    display: inline-block;
+    padding: 8px;
+    border: 1px solid #d7d7d7;
+    background: #f2f2f2;
+}
+#board.list > .page > .prev {}
+#board.list > .page > .next {}
+#board.list > .page > .num {}
+#board.list > .page > .current {
+    border: 1px solid #6d6d6d;
+    background: #888;
+    color: white;
+}
+
+#board.list > .btnWrite {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: inline-block;
+    padding: 8px;
+    border: 1px solid #3b3c3f;
+    background: #4b545e;
+    color: #fff;
+}
 /* 글쓰기 */
 /* 글보기 */
 /* 글수정 */
